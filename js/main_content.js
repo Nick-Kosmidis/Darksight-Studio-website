@@ -8,6 +8,17 @@ const dynamicNavigationLinks = document.querySelectorAll('nav .navbar-nav .nav-l
 
 function getMainContentOfCategory(contentCategory)
 {
+    const template = document.querySelector("#"+contentCategory+"-page");
+    if(template)
+    {
+        return template.innerHTML;
+    }
+    else
+    {
+        return "<p>Not found.</p>";
+    }
+
+
     switch(contentCategory)
     {
         case 'projects':

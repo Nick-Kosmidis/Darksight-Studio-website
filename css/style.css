@@ -7,6 +7,23 @@ body
     scroll-behavior: smooth;
 }
 
+h1
+{
+    font-size: 48;
+    text-align: center;
+}
+
+.biography  
+{
+    font-size: 1rem; 
+    line-height: 1.6; 
+    margin-bottom: 1.5rem;
+    padding-left: 300px; 
+    padding-right: 200px; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .navbar
 {
     background-color: #000000;
@@ -143,4 +160,15 @@ footer .social-icons a.discord
     text-align: center;
     text-decoration: none;
     margin: 0.35rem 0.15rem;
+}
+
+.game-link {
+    display: block;
+    cursor: pointer;
+}
+
+.game-link:hover img {
+    opacity: 0.85; 
+    transform: scale(1.02); 
+    transition: all 0.3s ease-in-out;
 }
