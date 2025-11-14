@@ -10,116 +10,137 @@ body
 .navbar
 {
     background-color: #000000;
-    background-image: url("src/TopBorderOverlay.png");
+    background-image: url("../res/images/TopBorderOverlay.png");
     background-size: cover;
 }
 
-.navbar-nav {
+#main-logo-button
+{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#main-logo-button:hover
+{
+    background-color: #5555550a;
+}
+
+.navbar-nav 
+{
   display: flex;
   gap: 1.5rem;                   
   margin: 0;
   padding: 0;
 }
 
-.navbar .nav-link {
+.navbar .nav-link 
+{
   color: #fff;
   font-size: 1.2rem;           
   font-weight: 500;
   transition: color 0.3s;
 }
 
-.navbar .nav-link:hover {
+.navbar .nav-link:hover 
+{
   color: #a1a1a1;              
+}
+
+#main-content
+{
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
 }
 
 .main-background 
 {
-    background-image: url("src/MainBackground.png");
+    background-image: url("../res/images/MainBackground.png");
     background-size: cover;        
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;       
-    margin-top: -150px;  
+    height: 100%;
 }         
 
-.footer 
+footer 
 {
   background-color: #00000083;   
-  background-image: url("src/BottomOverlay.png");    
+  background-image: url("../res/images/BottomOverlay.png");    
   background-size: cover;    
-  padding: 40px;
   display: flex;
+  padding: 4rem;
   justify-content: space-between;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9rem;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 -0.15rem 0.35rem rgba(0,0,0,0.2);
 }
 
-.footer .social-icons 
+footer .social-icons 
 {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 0.95rem;
 }
 
-.footer .social-icons a 
+footer .social-icons a 
 {
   color: #000;
   text-decoration: none;
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.3rem;
   transition: transform 0.2s, color 0.2s;
 }
 
-.footer .social-icons a.social 
+footer .social-icons a.social 
 {
   background-color: #fff;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 3.1rem;
+  height: 3.1rem;
   justify-content: center;
-  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+  box-shadow: 0 0 0.4rem rgba(0,0,0,0.4);
 }
 
-.footer .social-icons a.social:hover 
+footer .social-icons a.social:hover 
 {
   transform: scale(1.1);
   color: #444;
 }
 
-.footer .copyright
+footer .copyright
 {
   color: #555;
   font-size: 0.85rem;
 }
 
-.footer .social-icons a.discord {
+footer .social-icons a.discord 
+{
     color: #ffffff;
     font-size: large;
     text-align: center;
-    border-radius: 25px;
-    padding: 10px 20px;
+    border-radius: 1.5rem;
+    padding: 0.4rem 1.25rem;
     font-weight: 700;
-    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+    box-shadow: 0 0 0.6rem rgba(0,0,0,0.4);
     transition: transform 0.2s, background-color 0.2s;
 
     display: flex;                
     align-items: center;         
     justify-content: center;      
-    gap: 5px;                     
+    gap: 0.35rem;                     
 }
 
 .fa-brands 
 {
-    font-size: 20px;
-    width: 50px;
+    font-size: 1.25rem;
+    width: 3.1rem;
     text-align: center;
     text-decoration: none;
-    margin: 5px 2px;
+    margin: 0.35rem 0.15rem;
 }
-
-
