@@ -68,7 +68,6 @@ h1
 #main-content
 {
     width: 100%;
-    height: 100vh;
     min-height: 100vh;
 }
 
@@ -171,4 +170,57 @@ footer .social-icons a.discord
     opacity: 0.85; 
     transform: scale(1.02); 
     transition: all 0.3s ease-in-out;
+}
+
+.title 
+{
+  position: absolute;
+  top: 10rem;                  
+  left: 50%;  
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.platform-links-container {
+    position: absolute; 
+    bottom: 40px;       
+    left: 50%;  
+    transform: translateX(-50%); 
+    z-index: 5;
+    
+    display: flex; 
+    gap: 20px; 
+    align-items: center;
+}
+
+.platform-links-container .icon 
+{
+    height: 50px; 
+    width: auto;
+}
+
+.eotb-buy-now
+{
+    position: absolute; 
+    bottom: 150px;
+    left: 50%;  
+    transform: translate(-50%); 
+    color: #ffffff; 
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.game-description  
+{
+    /* ΑΥΤΗ ΕΙΝΑΙ Η ΚΑΙΡΙΑ ΠΡΟΣΘΗΚΗ */
+    margin-top: 10vh; 
+    
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+    margin-bottom: 1.5rem;
+    padding-left: 300px; 
+    padding-right: 200px; 
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

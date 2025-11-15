@@ -39,6 +39,23 @@ function getMainContentOfCategory(contentCategory)
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function handleProjectLinkClick(event) 
+{
+    event.preventDefault();
+    mainContent.innerHTML = getMainContentOfCategory(event.currentTarget.dataset.content);
+}
+
+function attachProjectLinkListeners() 
+{
+    const projectLinks = document.querySelectorAll('.game-link.project-link'); 
+    
+    projectLinks.forEach(link => {
+        link.removeEventListener('click', handleProjectLinkClick); 
+        link.addEventListener('click', handleProjectLinkClick);
+    });
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 mainLogoButton.addEventListener('click', (event) => {
     mainContent.innerHTML = '<div class=\"main-background\"></div>';
@@ -47,7 +64,11 @@ mainLogoButton.addEventListener('click', (event) => {
 dynamicNavigationLinks.forEach(link => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
-        mainContent.innerHTML = getMainContentOfCategory(link.dataset.content);
+        const contentCategory = link.dataset.content;
+        mainContent.innerHTML = getMainContentOfCategory(contentCategory);
+        if (contentCategory === 'projects') {
+            attachProjectLinkListeners();
+        }
     });
 });
 
